@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "lint": "npx eslint"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/HelenBassa/ciphering-CLI-tool/issues"
   },
-  "homepage": "https://github.com/HelenBassa/ciphering-CLI-tool#readme"
+  "homepage": "https://github.com/HelenBassa/ciphering-CLI-tool#readme",
+  "type": "module",
+  "devDependencies": {
+    "eslint": "^8.2.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.1.1"
+  }
 }
