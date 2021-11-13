@@ -5,7 +5,7 @@ const validate = (config) => {
   const configArray = config.split('-');
   let result;
 
-  const isValid = configArray.every((part) => ciphers.includes(part));
+  const isValid = configArray.length > 1 && configArray.every((part) => ciphers.includes(part));
   if (!isValid) {
     result = 'invalid';
   } else {

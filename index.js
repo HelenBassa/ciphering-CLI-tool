@@ -6,7 +6,6 @@ import validate from './validate.js';
 
 const error = new Error();
 const options = parse(process.argv.slice(2));
-console.log(options);
 const config = validate(options.config);
 
 if (!config) {
