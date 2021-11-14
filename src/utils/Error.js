@@ -9,13 +9,13 @@ class Error {
     process.exit('1');
   }
 
-  wrongConfig() {
-    process.stderr.write('Wrong config');
+  invalidConfig() {
+    process.stderr.write('Invalid config');
     process.exit('1');
   }
 
   noAccessToFile(path) {
-    process.stderr.write(`Can't access to file ${path}`);
+    process.stderr.write('File(s) don\'t exist or read-only');
     process.exit('1');
   }
 }

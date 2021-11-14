@@ -3,16 +3,16 @@ const validate = (config) => {
 
   const ciphers = ['C1', 'C0', 'A', 'R1', 'R0'];
   const configArray = config.split('-');
-  let result;
+  let checkedConfig;
 
-  const isValid = configArray.length > 1 && configArray.every((part) => ciphers.includes(part));
+  const isValid = configArray.every((part) => ciphers.includes(part));
   if (!isValid) {
-    result = 'invalid';
+    checkedConfig = 'invalid';
   } else {
-    result = configArray;
+    checkedConfig = configArray;
   }
 
-  return result;
+  return checkedConfig;
 };
 
 export default validate;

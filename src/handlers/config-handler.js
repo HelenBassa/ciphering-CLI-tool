@@ -4,17 +4,17 @@ import { config } from '../../src/utils/options.js';
 
 const configErrorHandler = () => {
   const error = new Error();
-  const validConfig = validate(config);
+  const checkedConfig = validate(config);
 
-  if (!validConfig) {
+  if (!checkedConfig) {
     error.missingConfig();
   }
 
-  if (validConfig === 'invalid') {
-    error.wrongConfig();
+  if (checkedConfig === 'invalid') {
+    error.invalidConfig();
   };
 
-  return true;
+  return checkedConfig;
 };
 
 export default configErrorHandler;

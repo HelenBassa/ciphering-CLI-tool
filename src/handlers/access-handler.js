@@ -5,7 +5,7 @@ const error = new Error();
 
 const isFileAccess = (path) => {
   try {
-    if (fs.statSync(path)) return true;
+    if (fs.accessSync(path)) return true;
   } catch (e) {
     error.noAccessToFile(path);
   }
