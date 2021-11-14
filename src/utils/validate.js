@@ -1,7 +1,7 @@
 const validate = (config) => {
   if (!config) return false;
 
-  const ciphers = ['C0', 'C1', 'A', 'R0', 'R1'];
+  const ciphers = ['C1', 'C0', 'A', 'R1', 'R0'];
   const configArray = config.split('-');
   let result;
 
